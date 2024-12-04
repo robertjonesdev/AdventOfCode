@@ -1,4 +1,3 @@
-import os
 from aocd.models import Puzzle
 from functools import reduce
 from collections import Counter
