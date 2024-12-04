@@ -29,7 +29,18 @@ def part1(data):
 
 def part2(data):
     """Solve part 2."""
-    pass
+    matches = re.findall(r"mul\(\d{1,3},\d{1,3}\)|do\(\)|don't\(\)", data)
+    on = True
+    total = 0
+    for match in matches:
+        if match == "do()":
+            on = True
+        elif match == "don't()":
+            on = False
+        elif on:
+            x, y = re.match("mul\((\d{1,3}),(\d{1,3})\)", match).groups()
+            total += int(x) * int(y)
+    return total
 
 
 def solve(puzzle_input):
