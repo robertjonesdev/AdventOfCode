@@ -1,6 +1,4 @@
 from aocd.models import Puzzle
-from functools import reduce
-from collections import Counter
 
 YEAR = 2024
 DAY = 1
@@ -8,14 +6,7 @@ DAY = 1
 
 def parse(data: str):
     """Parse input."""
-    # no parsing
     return data
-    # String rows to list
-    # return data.splitlines()
-    # Integer rows to list
-    # return [list(map(int, line.split())) for line in data.splitlines()]
-    # Columns to Rows
-    # return list(zip(*(map(int, line.split()) for line in data.splitlines())))
 
 
 def part1(data):
